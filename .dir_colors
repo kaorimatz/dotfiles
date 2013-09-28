@@ -1,0 +1,24 @@
+#
+# Update
+#   - eval `dircolors ~/.dir_colors`
+#
+# See
+#   - /etc/DIR_COLORS
+#   - dir_colors(5)
+#
+RESET                 0
+DIR                   31
+OTHER_WRITABLE        31;43
+STICKY_OTHER_WRITABLE 31;44
+STICKY                31;47
+LINK                  32
+ORPHAN                32;04
+EXEC                  33
+SETUID                33;41
+SETGID                33;46
+CAPABILITY            33;47
+MULTIHARDLINK         34
+FIFO                  31;04
+SOCK                  32;04
+BLK                   33;04
+CHR                   34;04
