@@ -1,0 +1,20 @@
+script_line1 = use strict
+script_line2 = use warnings
+script_line3 = use utf8
+
+[Autocomplete::Commands]
+[Autocomplete::Functions]
+[Autocomplete::Globals]
+[Autocomplete::Keywords]
+[Autocomplete::Lexicals]
+[Autocomplete::Methods]
+[Autocomplete::Packages]
+[Colors]
+[DataDumper]
+[FancyPrompt]
+[Hints]
+[Interrupt]
+[LexicalPersistence]
+[Packages]
+[ReadLine]
+[ResultCache]
