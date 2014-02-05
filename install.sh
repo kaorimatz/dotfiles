@@ -14,7 +14,7 @@ symlink() {
 }
 
 if [ -e "$dotfiles" ]; then
-  git -C "$dotfiles" pull --rebase
+  (cd "$dotfiles" && git pull --rebase)
 else
   git clone https://github.com/kaorimatz/dotfiles "$dotfiles"
 fi
