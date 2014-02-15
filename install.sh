@@ -27,6 +27,8 @@ symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
 
 has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
+has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
+
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 
 has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
