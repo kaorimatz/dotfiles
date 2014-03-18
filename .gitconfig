@@ -6,3 +6,5 @@
   st = status -s -b
 [color]
   ui = 1
+[push]
+  default = simple
