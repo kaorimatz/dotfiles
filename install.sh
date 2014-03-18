@@ -31,4 +31,6 @@ has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
 
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 
+has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
+
 has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
