@@ -29,6 +29,8 @@ has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
 has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
 
+has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
+
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 
 has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
