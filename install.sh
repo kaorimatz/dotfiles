@@ -34,3 +34,5 @@ has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
 has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
+
+has zsh && symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
