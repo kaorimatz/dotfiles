@@ -1,2 +1,8 @@
+[alias]
+  amend = commit --amend -v
+  ci = commit -v
+  co = checkout
+  ready = rebase -i @{u}
+  st = status -s -b
 [color]
   ui = 1
