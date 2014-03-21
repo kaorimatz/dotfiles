@@ -1,0 +1,26 @@
+"
+" Hints
+"
+autocmd LocationChange .* -javascript delete tabs.options.hinttags
+autocmd LocationChange b\.hatena\.ne\.jp/search              setlocal hinttags=//ul[@class='search-result-list']/li/h3/a
+autocmd LocationChange github\.com/search                    setlocal hinttags=//h3[@class='repolist-name']/a
+autocmd LocationChange metacpan\.org/search                  setlocal hinttags=//div[@class='module-result']/big/strong/a
+autocmd LocationChange scholar\.google\.(com|co\.jp)/scholar setlocal hinttags=//h3[@class='gs_rt']/a
+autocmd LocationChange www\.google\.(com|co\.jp)/search      setlocal hinttags=//h3[@class='r']/a
+
+"
+" Key Mappings
+"
+nnoremap j <Down>
+nnoremap k <Up>
+nnoremap <C-e> <Down>
+nnoremap <C-y> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+
+"
+" RC Files
+"
+source! ~/.vimperatorrc.js
+source! ~/.vimperatorrc.local
+source! ~/.vimperatorrc.local.js

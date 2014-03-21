@@ -9,6 +9,12 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
+has_app() {
+  [ `uname -s` = Darwin ] && osascript <<EOF > /dev/null 2>&1
+tell application "Finder" to return name of application file id "$1"
+EOF
+}
+
 symlink() {
   [ -e "$2" ] || ln -s "$1" "$2"
 }
@@ -24,6 +30,10 @@ has ack && symlink "$dotfiles/.ackrc" "$HOME/.ackrc"
 has curl && symlink "$dotfiles/.curlrc" "$HOME/.curlrc"
 
 symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
+
+if has firefox || has_app org.mozilla.firefox; then
+  symlink "$dotfiles/.vimperatorrc" "$HOME/.vimperatorrc"
+fi
 
 has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
