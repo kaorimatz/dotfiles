@@ -8,3 +8,5 @@
   ui = 1
 [push]
   default = simple
+[include]
+  path = ~/.gitconfig.local
