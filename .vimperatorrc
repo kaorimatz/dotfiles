@@ -1,4 +1,10 @@
 "
+" Options
+"
+set complete=S
+set toolbars=none,navigation
+
+"
 " Hints
 "
 autocmd LocationChange .* -javascript delete tabs.options.hinttags
