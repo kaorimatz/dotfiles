@@ -24,3 +24,10 @@ RPROMPT='%(?.%F{cyan}.%F{red})[%m:%1~]%f'
 # Completion
 #
 autoload -U compinit; compinit
+
+#
+# Local Settings
+#
+if [ -r ~/.zshrc.local ]; then
+  . ~/.zshrc.local
+fi
