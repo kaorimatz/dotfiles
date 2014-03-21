@@ -19,7 +19,7 @@ symlink() {
   [ -e "$2" ] || ln -s "$1" "$2"
 }
 
-if [ -e "$dotfiles" ]; then
+if [ -d "$dotfiles" ]; then
   (cd "$dotfiles" && git pull --rebase)
 else
   git clone https://github.com/kaorimatz/dotfiles "$dotfiles"
