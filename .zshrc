@@ -18,7 +18,7 @@ setopt share_history
 # Prompt
 #
 PROMPT='%(?.%F{green}.%F{red})$ %f'
-RPROMPT='%(?.%F{cyan}.%F{red})[%m:%1~]%f'
+RPROMPT='%(?.%F{green}.%F{red})[%m:%1~]%f'
 
 #
 # Completion
