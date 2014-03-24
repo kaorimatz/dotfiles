@@ -47,5 +47,6 @@ has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
 has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
 
+has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
 has zsh && symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
 has zsh && symlink "$dotfiles/.zshrc" "$HOME/.zshrc"
