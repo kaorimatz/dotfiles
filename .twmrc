@@ -1,0 +1,39 @@
+#
+# Variables
+#
+NoTitle
+{
+  "corebird"
+  "evince"
+  "gnome-control-center"
+  "google-chrome"
+}
+
+#
+# Bindings
+#
+Button1 =              : root : f.menu "menu"
+"Tab"   = meta         : all  : f.raiselower
+"c"     = shift | meta : all  : f.delete
+"f"     = shift | meta : all  : f.fullzoom
+"h"     = shift | meta : all  : f.leftzoom
+"l"     = shift | meta : all  : f.rightzoom
+
+#
+# Menus
+#
+menu "menu"
+{
+  "Menu"    f.title
+  "Iconify" f.iconify
+  "Resize"  f.resize
+  "Move"    f.move
+  "Raise"   f.raise
+  "Lower"   f.lower
+  ""        f.nop
+  "Delete"  f.delete
+  "Destroy" f.destroy
+  ""        f.nop
+  "Restart" f.restart
+  "Quit"    f.quit
+}

@@ -45,6 +45,8 @@ has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 
 has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
+has twm && symlink "$dotfiles/.twmrc" "$HOME/.twmrc"
+
 has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
 
 has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
