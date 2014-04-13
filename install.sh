@@ -48,7 +48,11 @@ has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
 has twm && symlink "$dotfiles/.twmrc" "$HOME/.twmrc"
 
-has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
+if has vim; then
+  symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
+  mkdir -p "$HOME/.vim"
+  symlink "$dotfiles/.vim/filetype.vim" "$HOME/.vim/filetype.vim"
+fi
 
 has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
 has zsh && symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
