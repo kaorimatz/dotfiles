@@ -11,3 +11,7 @@ else
   PAGER=less
 fi
 export PAGER
+
+if [ -r ~/.zshenv.local ]; then
+  . ~/.zshenv.local
+fi
