@@ -5,6 +5,8 @@ set ignorecase
 set list
 set listchars=tab:>-
 set smartcase
+set undodir=~/.vimundo
+set undofile
 
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
@@ -18,20 +20,21 @@ augroup vimrc
   autocmd!
 augroup END
 
-autocmd vimrc FileType markdown setlocal expandtab
-autocmd vimrc FileType markdown setlocal softtabstop=4
+function! s:set_indent(spaces)
+  setlocal expandtab
+  execute 'setlocal shiftwidth=' . a:spaces
+  execute 'setlocal softtabstop=' . a:spaces
+endfunction
 
-autocmd vimrc FileType perl setlocal expandtab
-autocmd vimrc FileType perl setlocal softtabstop=4
-
-autocmd vimrc FileType python setlocal expandtab
-autocmd vimrc FileType python setlocal softtabstop=4
-
-autocmd vimrc FileType ruby setlocal expandtab
-autocmd vimrc FileType ruby setlocal softtabstop=2
-
-autocmd vimrc FileType vim setlocal expandtab
-autocmd vimrc FileType vim setlocal softtabstop=2
+autocmd vimrc FileType html call s:set_indent(2)
+autocmd vimrc FileType java call s:set_indent(4)
+autocmd vimrc FileType javascript call s:set_indent(2)
+autocmd vimrc FileType markdown call s:set_indent(4)
+autocmd vimrc FileType perl call s:set_indent(4)
+autocmd vimrc FileType python call s:set_indent(4)
+autocmd vimrc FileType ruby call s:set_indent(2)
+autocmd vimrc FileType sh call s:set_indent(2)
+autocmd vimrc FileType vim call s:set_indent(2)
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
