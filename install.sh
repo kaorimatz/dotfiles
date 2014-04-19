@@ -40,6 +40,8 @@ has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
 has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
 
+has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
+
 has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
 
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
