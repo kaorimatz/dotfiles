@@ -3,6 +3,7 @@
 #
 bindkey -e
 bindkey '^U' backward-kill-line
+setopt ignore_eof
 
 #
 # History

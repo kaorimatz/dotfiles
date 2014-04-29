@@ -1,3 +1,5 @@
+[ -d "$HOME/.cabal" ] && export PATH="$HOME/.cabal/bin:$PATH"
+
 if type vim > /dev/null 2>&1; then
   EDITOR=vim
 else
