@@ -1,0 +1,189 @@
+if !isdirectory(expand('~/.vim/bundle/neobundle.vim'))
+  finish
+endif
+
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+call neobundle#begin()
+
+"
+" neobundle.vim
+"
+NeoBundleFetch 'Shougo/neobundle.vim', {
+      \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
+      \ }
+
+"
+" neocomplete.vim
+"
+NeoBundleLazy 'Shougo/neocomplete.vim', {
+      \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
+      \   'vim_version': '7.3.885',
+      \   'disabled': !has('lua'),
+      \   'autoload': {
+      \     'insert': 1,
+      \   },
+      \ }
+if neobundle#tap('neocomplete.vim')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    let g:neocomplete#enable_at_startup = 1
+  endfunction
+  call neobundle#untap()
+endif
+
+"
+" neomru.vim
+"
+NeoBundleLazy 'Shougo/neomru.vim', {
+      \   'depends': 'Shougo/unite.vim',
+      \   'autoload': {
+      \     'unite_sources': ['neomru/file', 'neomru/directory'],
+      \   },
+      \ }
+if neobundle#tap('neomru.vim')
+  noremap <silent> [unite]d :<C-u>Unite -default-action=lcd neomru/directory directory directory/new<CR>
+  noremap <silent> [unite]f :<C-u>Unite neomru/file file file/new<CR>
+  call neobundle#untap()
+endif
+
+"
+" neosnippet.vim
+"
+NeoBundleLazy 'Shougo/neosnippet.vim', {
+      \   'depends': ['Shougo/neocomplete.vim', 'Shougo/neosnippet-snippets'],
+      \   'autoload': {
+      \     'commands': 'NeoSnippetEdit',
+      \     'insert': 1,
+      \   },
+      \ }
+if neobundle#tap('neosnippet.vim')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    let g:neosnippet#snippets_directory = '~/.vim/snippets'
+    imap <silent> <C-k> <Plug>(neosnippet_expand_or_jump)
+    smap <silent> <C-k> <Plug>(neosnippet_expand_or_jump)
+  endfunction
+  call neobundle#untap()
+endif
+
+"
+" skk.vim
+"
+NeoBundleLazy 'tyru/skk.vim', {
+      \   'autoload': {
+      \     'mappings': [
+      \       ['ic', '<Plug>(skk-toggle-im)'],
+      \     ],
+      \   },
+      \ }
+if neobundle#tap('skk.vim')
+  imap <C-j> <Plug>(skk-toggle-im)
+  cmap <C-j> <Plug>(skk-toggle-im)
+  function! neobundle#tapped.hooks.on_source(bundle)
+    if has('unix')
+      let g:skk_large_jisyo = '/usr/share/skk/SKK-JISYO.L'
+    elseif has('mac')
+      let g:skk_large_jisyo = '~/Library/Application Support/AquaSKK/SKK-JISYO.L'
+    endif
+    let g:skk_auto_save_jisyo = 1
+    let g:skk_keep_state = 1
+    let g:skk_manual_save_jisyo_keys = ''
+    let g:skk_marker_black = '▾'
+    let g:skk_marker_white = '▿'
+  endfunction
+  call neobundle#untap()
+endif
+
+"
+" syntastic
+"
+NeoBundleLazy 'scrooloose/syntastic', {
+      \   'autoload': {
+      \     'commands': 'SyntasticCheck',
+      \     'filetypes': 'sh'
+      \   },
+      \ }
+
+"
+" unite.vim
+"
+NeoBundleLazy 'Shougo/unite.vim', {
+      \   'depends': 'Shougo/vimproc.vim',
+      \   'autoload': {
+      \     'commands': {
+      \       'name': 'Unite',
+      \       'complete': 'customlist,unite#complete#source',
+      \     },
+      \   },
+      \ }
+if neobundle#tap('unite.vim')
+  nnoremap [unite] <Nop>
+  nmap <Space>u [unite]
+  noremap <silent> [unite]a :<C-u>Unite file_rec/async<CR>
+  noremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  call neobundle#untap()
+endif
+
+"
+" unite-cpan-module
+"
+NeoBundleLazy 'kaorimatz/unite-cpan-module', {
+      \   'depends': 'Shougo/unite.vim',
+      \ }
+if neobundle#tap('unite-cpan-module')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    highlight uniteSource__CpanModule_Date ctermfg=Green
+    highlight uniteSource__CpanModule_Author ctermfg=Red
+  endfunction
+  call neobundle#untap()
+endif
+
+"
+" unite-outline
+"
+NeoBundleLazy 'Shougo/unite-outline', {
+      \   'depends': 'Shougo/unite.vim',
+      \   'external_commands': 'ctags',
+      \ }
+
+"
+" vimfiler.vim
+"
+NeoBundleLazy 'Shougo/vimfiler.vim', {
+      \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
+      \   'autoload': {
+      \     'explorer': 1,
+      \   },
+      \ }
+if neobundle#tap('vimfiler.vim')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    let g:vimfiler_as_default_explorer = 1
+    let g:vimfiler_tree_leaf_icon = ' '
+    let g:vimfiler_tree_closed_icon = '▸'
+    let g:vimfiler_tree_opened_icon = '▾'
+    let g:vimfiler_readonly_file_icon = '×'
+  endfunction
+  call neobundle#untap()
+endif
+
+"
+" vimperator
+"
+NeoBundle 'http://code.google.com/p/vimperator-labs', {
+      \   'type': 'hg',
+      \   'rtp': 'vimperator/contrib/vim',
+      \ }
+
+"
+" vimproc.vim
+"
+NeoBundleLazy 'Shougo/vimproc.vim', {
+      \   'build' : {
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \   },
+      \ }
+
+call neobundle#end()

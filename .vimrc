@@ -1,3 +1,5 @@
+runtime vimrc/neobundle.vim
+
 filetype plugin indent on
 syntax on
 

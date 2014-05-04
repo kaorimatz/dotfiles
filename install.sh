@@ -10,7 +10,7 @@ has() {
 }
 
 has_app() {
-  [ `uname -s` = Darwin ] && osascript <<EOF > /dev/null 2>&1
+  [ "`uname -s`" = Darwin ] && osascript <<EOF > /dev/null 2>&1
 tell application "Finder" to return name of application file id "$1"
 EOF
 }
@@ -54,6 +54,8 @@ if has vim; then
   symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
   mkdir -p "$HOME/.vim"
   symlink "$dotfiles/.vim/filetype.vim" "$HOME/.vim/filetype.vim"
+  mkdir -p "$HOME/.vim/vimrc"
+  symlink "$dotfiles/.vim/vimrc/neobundle.vim" "$HOME/.vim/vimrc/neobundle.vim"
 fi
 
 has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
