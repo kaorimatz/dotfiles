@@ -1,0 +1,10 @@
+[diff]
+git = True
+
+[extensions]
+churn =
+color =
+pager =
+shelve =
+
+%include ~/.hgrc.local
