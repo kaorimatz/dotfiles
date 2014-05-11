@@ -1,9 +1,9 @@
 [alias]
-  amend = commit --amend -v
-  ci = commit -v
+  amend = commit --amend -v -uno
+  ci = commit -v -uno
   co = checkout
   ready = rebase -i @{u}
-  st = status -s -b
+  st = status -s -b -uno
 [color]
   ui = 1
 [push]
