@@ -40,7 +40,7 @@ endif
 NeoBundleLazy 'Shougo/neomru.vim', {
       \   'depends': 'Shougo/unite.vim',
       \   'autoload': {
-      \     'unite_sources': ['neomru/file', 'neomru/directory'],
+      \     'unite_sources': ['neomru/directory', 'neomru/file'],
       \   },
       \ }
 if neobundle#tap('neomru.vim')
@@ -102,7 +102,7 @@ endif
 NeoBundleLazy 'scrooloose/syntastic', {
       \   'autoload': {
       \     'commands': 'SyntasticCheck',
-      \     'filetypes': 'sh'
+      \     'filetypes': 'sh',
       \   },
       \ }
 
@@ -147,6 +147,11 @@ NeoBundleLazy 'Shougo/unite-outline', {
       \   'depends': 'Shougo/unite.vim',
       \   'external_commands': 'ctags',
       \ }
+
+"
+" vim-template
+"
+NeoBundle 'thinca/vim-template'
 
 "
 " vimfiler.vim
