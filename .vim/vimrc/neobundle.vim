@@ -82,10 +82,10 @@ if neobundle#tap('skk.vim')
   imap <C-j> <Plug>(skk-toggle-im)
   cmap <C-j> <Plug>(skk-toggle-im)
   function! neobundle#tapped.hooks.on_source(bundle)
-    if has('unix')
-      let g:skk_large_jisyo = '/usr/share/skk/SKK-JISYO.L'
-    elseif has('mac')
+    if has('mac')
       let g:skk_large_jisyo = '~/Library/Application Support/AquaSKK/SKK-JISYO.L'
+    elseif has('unix')
+      let g:skk_large_jisyo = '/usr/share/skk/SKK-JISYO.L'
     endif
     let g:skk_auto_save_jisyo = 1
     let g:skk_keep_state = 1
