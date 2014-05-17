@@ -105,6 +105,14 @@ NeoBundleLazy 'scrooloose/syntastic', {
       \     'filetypes': 'sh',
       \   },
       \ }
+if neobundle#tap('syntastic')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    let g:syntastic_mode_map = {
+          \   'mode': 'passive',
+          \ }
+  endfunction
+  call neobundle#untap()
+endif
 
 "
 " unite.vim
