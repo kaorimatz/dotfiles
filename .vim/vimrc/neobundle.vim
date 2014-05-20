@@ -157,6 +157,16 @@ NeoBundleLazy 'Shougo/unite-outline', {
       \ }
 
 "
+" vim-quickrun
+"
+NeoBundleLazy 'thinca/vim-quickrun', {
+      \   'depends': 'Shougo/vimproc.vim',
+      \   'autoload': {
+      \     'commands': 'QuickRun',
+      \   },
+      \ }
+
+"
 " vim-template
 "
 NeoBundle 'thinca/vim-template'
