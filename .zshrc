@@ -27,6 +27,13 @@ RPROMPT='%(?.%F{green}.%F{red})[%m:%1~]%f'
 autoload -U compinit; compinit
 
 #
+# Line Editor
+#
+autoload -U select-word-style; select-word-style default
+zstyle ':zle:*' word-style unspecified
+zstyle ':zle:*' word-chars ' /'
+
+#
 # Local Settings
 #
 if [ -r ~/.zshrc.local ]; then
