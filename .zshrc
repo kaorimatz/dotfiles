@@ -18,8 +18,15 @@ setopt share_history
 #
 # Prompt
 #
+autoload vcs_info
+precmd() {
+  vcs_info
+}
+zstyle ':vcs_info:*' formats '[%s:%b]'
+zstyle ':vcs_info:*' actionformats '[%s:%b|%a]'
+setopt prompt_subst
 PROMPT='%(?.%F{green}.%F{red})$ %f'
-RPROMPT='%(?.%F{green}.%F{red})[%m:%1~]%f'
+RPROMPT='%(?.%F{green}.%F{red})[%m:%1~]${vcs_info_msg_0_}%f'
 
 #
 # Completion
