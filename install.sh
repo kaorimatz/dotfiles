@@ -52,6 +52,8 @@ has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 
 has twm && symlink "$dotfiles/.twmrc" "$HOME/.twmrc"
 
+has vagrant && symlink "$dotfiles/.vagrant.d/Vagrantfile" "$HOME/.vagrant.d/Vagrantfile"
+
 if has vim; then
   symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
   mkdir -p "$HOME/.vim"
