@@ -16,7 +16,7 @@ EOF
 }
 
 symlink() {
-  [ -e "$2" ] || ln -s "$1" "$2"
+  [ -e "$2" ] || [ -e "$2".norc ] || ln -s "$1" "$2"
 }
 
 if [ -d "$dotfiles" ]; then
