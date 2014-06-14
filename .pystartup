@@ -1,0 +1,20 @@
+import atexit
+import os
+import readline
+import rlcompleter
+
+readline.parse_and_bind('tab: complete')
+
+history_file = os.path.expanduser('~/.python_history')
+try:
+    readline.read_history_file(history_file)
+except IOError:
+    pass
+
+atexit.register(readline.write_history_file, history_file)
+
+del atexit
+del os
+del readline
+del rlcompleter
+del history_file

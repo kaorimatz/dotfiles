@@ -46,6 +46,8 @@ has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
 
 has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
 
+has python && symlink "$dotfiles/.pystartup" "$HOME/.pystartup"
+
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
 
 has tmux && symlink "$dotfiles/.tmux.conf" "$HOME/.tmux.conf"

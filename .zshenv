@@ -1,4 +1,5 @@
 [ -d "$HOME/.cabal" ] && export PATH="$HOME/.cabal/bin:$PATH"
+[ -f "$HOME/.pystartup" ] && export PYTHONSTARTUP="$HOME/.pystartup"
 
 if type vim > /dev/null 2>&1; then
   EDITOR=vim
