@@ -1,3 +1,3 @@
 require 'irb/completion'
 
-IRB.conf[:SAVE_HISTORY] = 10000000
+IRB.conf[:SAVE_HISTORY] = 100000000
