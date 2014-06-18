@@ -64,6 +64,8 @@ if has vim; then
   symlink "$dotfiles/.vim/vimrc/neobundle.vim" "$HOME/.vim/vimrc/neobundle.vim"
 fi
 
+has weechat && symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
+
 has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
 has zsh && symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
 has zsh && symlink "$dotfiles/.zshrc" "$HOME/.zshrc"
