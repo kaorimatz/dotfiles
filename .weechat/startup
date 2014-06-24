@@ -39,6 +39,8 @@
 
 /wait 15 /set buffers.color.current_bg default
 /wait 15 /set buffers.color.current_fg yellow
+/wait 15 /set buffers.color.hotlist_message_fg red
+/wait 15 /set buffers.color.hotlist_private_fg green
 /wait 15 /set buffers.color.number_char default
 /wait 15 /set buffers.color.number default
 /wait 15 /set buffers.look.show_number off
