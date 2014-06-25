@@ -1,6 +1,6 @@
 #
 # Run
-#   - weechat --no-plugin --run-command "$(grep '^/' ~/.weechat/startup | tr '\n' ';')"
+#   - weechat --no-plugin --no-script --run-command "$(grep -h '^/' ~/.weechat/startup ~/.weechat/startup.local 2> /dev/null | tr '\n' ';')"
 #
 
 #
