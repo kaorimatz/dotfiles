@@ -41,6 +41,13 @@ zstyle ':zle:*' word-style unspecified
 zstyle ':zle:*' word-chars ' /'
 
 #
+# Aliases
+#
+if type ag > /dev/null 2>&1; then
+  alias ag='ag --color-match 31 --color-path 4'
+fi
+
+#
 # Local Settings
 #
 if [ -r ~/.zshrc.local ]; then
