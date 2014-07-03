@@ -33,6 +33,11 @@
 /key bind ctrl-Y /window scroll_up
 
 #
+# Filters
+#
+/filter add irc_smart * irc_smart_filter *
+
+#
 # Scripts
 #
 /script install buffers.pl chanmon.pl highmon.pl iset.pl
