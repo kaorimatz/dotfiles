@@ -1,4 +1,4 @@
-runtime vimrc/neobundle.vim
+runtime config/plugins.vim
 
 filetype plugin indent on
 syntax on
