@@ -1,4 +1,9 @@
 "
+" Plugins
+"
+runtime config/plugins.js
+
+"
 " Options
 "
 set complete=S
@@ -30,11 +35,6 @@ nnoremap <C-e> <Down>
 nnoremap <C-y> <Up>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
-
-"
-" Plugins
-"
-runtime config/plugins.js
 
 "
 " RC Files

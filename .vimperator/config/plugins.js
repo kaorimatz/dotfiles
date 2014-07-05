@@ -22,6 +22,10 @@
     'sbmcommentsviewer',
     'yetmappings',
   ];
+  liberator.registerObserver('enter', function onEnterSourcePlugins() {
+    io.source(libly.path, false);
+    io.source(loader.path, false);
+  });
 
   //
   // appendAnchor.js
@@ -42,7 +46,4 @@
   // sbmcommentsviewer.js
   //
   liberator.globalVariables.def_sbms = 'h';
-
-  io.source(libly.path, false);
-  io.source(loader.path, false);
 })();
