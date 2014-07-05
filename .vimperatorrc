@@ -32,6 +32,11 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 "
+" Plugins
+"
+runtime config/plugins.js
+
+"
 " RC Files
 "
 source! ~/.vimperatorrc.js
