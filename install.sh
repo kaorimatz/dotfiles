@@ -68,6 +68,8 @@ fi
 
 has weechat && symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
 
-has zsh && symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
-has zsh && symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
-has zsh && symlink "$dotfiles/.zshrc" "$HOME/.zshrc"
+if has zsh; then
+  symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
+  symlink "$dotfiles/.zshenv" "$HOME/.zshenv"
+  symlink "$dotfiles/.zshrc" "$HOME/.zshrc"
+fi
