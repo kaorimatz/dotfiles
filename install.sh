@@ -48,6 +48,11 @@ has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
 
 has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
 
+if has percol; then
+  mkdir -p "$HOME/.percol.d"
+  symlink "$dotfiles/.percol.d/rc.py" "$HOME/.percol.d/rc.py"
+fi
+
 has python && symlink "$dotfiles/.pystartup" "$HOME/.pystartup"
 
 has reply && symlink "$dotfiles/.replyrc" "$HOME/.replyrc"
