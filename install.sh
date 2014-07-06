@@ -20,7 +20,7 @@ symlink() {
 }
 
 if [ -d "$dotfiles" ]; then
-  (cd "$dotfiles" && git pull --rebase)
+  (cd "$dotfiles" && git pull --ff-only)
 else
   git clone https://github.com/kaorimatz/dotfiles "$dotfiles"
 fi
