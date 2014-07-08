@@ -37,11 +37,8 @@ endif
 "
 " neomru.vim
 "
-NeoBundleLazy 'Shougo/neomru.vim', {
+NeoBundle 'Shougo/neomru.vim', {
       \   'depends': 'Shougo/unite.vim',
-      \   'autoload': {
-      \     'unite_sources': ['neomru/directory', 'neomru/file'],
-      \   },
       \ }
 if neobundle#tap('neomru.vim')
   noremap <silent> [unite]d :<C-u>Unite -default-action=lcd neomru/directory directory directory/new<CR>
