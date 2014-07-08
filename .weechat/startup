@@ -6,7 +6,7 @@
 #
 # Plugins
 #
-/set weechat.plugin.autoload 'irc,perl,script'
+/set weechat.plugin.autoload 'irc,perl,python,script'
 /plugin autoload
 
 #
@@ -40,7 +40,7 @@
 #
 # Scripts
 #
-/script install buffers.pl chanmon.pl highmon.pl iset.pl
+/script install autosort.py buffers.pl chanmon.pl grep.py highmon.pl iset.pl
 
 /wait 15 /set buffers.color.current_bg default
 /wait 15 /set buffers.color.current_fg yellow
