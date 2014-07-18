@@ -152,6 +152,10 @@ NeoBundleLazy 'Shougo/unite-outline', {
       \   'depends': 'Shougo/unite.vim',
       \   'external_commands': 'ctags',
       \ }
+if neobundle#tap('unite-outline')
+  noremap <silent> [unite]o :<C-u>Unite outline<CR>
+  call neobundle#untap()
+endif
 
 "
 " vim-quickrun
