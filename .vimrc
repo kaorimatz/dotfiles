@@ -3,6 +3,8 @@ runtime config/plugins.vim
 filetype plugin indent on
 syntax on
 
+colorscheme traditional
+
 set hlsearch
 set ignorecase
 set list

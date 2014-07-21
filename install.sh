@@ -69,6 +69,8 @@ if has vim; then
   symlink "$dotfiles/.vim/filetype.vim" "$HOME/.vim/filetype.vim"
   mkdir -p "$HOME/.vim/config"
   symlink "$dotfiles/.vim/config/plugins.vim" "$HOME/.vim/config/plugins.vim"
+  mkdir -p "$HOME/.vim/colors"
+  symlink "$dotfiles/.vim/colors/traditional.vim" "$HOME/.vim/colors/traditional.vim"
 fi
 
 has weechat && symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
