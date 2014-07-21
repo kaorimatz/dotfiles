@@ -3,6 +3,7 @@ runtime config/plugins.vim
 filetype plugin indent on
 syntax on
 
+set hlsearch
 set ignorecase
 set list
 set listchars=tab:>-
