@@ -10,6 +10,11 @@ endif
 call neobundle#begin()
 
 "
+" go-vim
+"
+NeoBundle 'vim-jp/go-vim'
+
+"
 " neobundle.vim
 "
 NeoBundleFetch 'Shougo/neobundle.vim', {
