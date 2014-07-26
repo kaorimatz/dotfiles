@@ -63,21 +63,41 @@ highlight Error cterm=underline ctermfg=Red ctermbg=NONE
 highlight Todo cterm=underline ctermfg=Yellow ctermbg=NONE
 
 "
+" diff.vim
+"
+highlight diffAdded ctermfg=Green
+highlight diffChanged ctermfg=Blue
+highlight diffRemoved ctermfg=Red
+
+"
 " go.vim
 "
+highlight goDeclType ctermfg=Cyan
 highlight goDeclaration ctermfg=Cyan
 highlight goDirective ctermfg=Cyan
-highlight goDeclType ctermfg=Cyan
+
+"
+" java.vim
+"
+highlight javaExternal ctermfg=Cyan
+highlight javaStorageClass ctermfg=Cyan
+
+"
+" javascript.vim
+"
+highlight javaScriptFunction ctermfg=Cyan
+highlight javaScriptValue ctermfg=Green
+
+"
+" python.vim
+"
+highlight pythonException ctermfg=Cyan
+highlight pythonInclude ctermfg=Cyan
+highlight pythonStatement ctermfg=Cyan
 
 "
 " ruby.vim
 "
-highlight rubyStringDelimiter ctermfg=Yellow
+highlight rubyControl ctermfg=Cyan
 highlight rubyDefine ctermfg=Cyan
-
-"
-" diff.vim
-"
-highlight diffAdded ctermfg=Green
-highlight diffRemoved ctermfg=Red
-highlight diffChanged ctermfg=Blue
+highlight rubyStringDelimiter ctermfg=Yellow
