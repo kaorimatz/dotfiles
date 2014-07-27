@@ -42,6 +42,8 @@ has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
 has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
 
+has gvim && symlink "$dotfiles/.gvimrc" "$HOME/.gvimrc"
+
 has hg && symlink "$dotfiles/.hgrc" "$HOME/.hgrc"
 
 has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
