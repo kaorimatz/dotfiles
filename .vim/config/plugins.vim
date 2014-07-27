@@ -12,7 +12,11 @@ call neobundle#begin()
 "
 " go-vim
 "
-NeoBundle 'vim-jp/go-vim'
+NeoBundleLazy 'vim-jp/go-vim', {
+      \   'autoload': {
+      \     'filetypes': 'go',
+      \   },
+      \ }
 
 "
 " neobundle.vim
@@ -200,9 +204,12 @@ endif
 "
 " vimperator
 "
-NeoBundle 'http://code.google.com/p/vimperator-labs', {
+NeoBundleLazy 'http://code.google.com/p/vimperator-labs', {
       \   'type': 'hg',
       \   'rtp': 'vimperator/contrib/vim',
+      \   'autoload': {
+      \     'filetypes': 'vimperator',
+      \   },
       \ }
 
 "
