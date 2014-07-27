@@ -56,6 +56,7 @@ highlight Identifier ctermfg=NONE
 highlight Statement ctermfg=NONE
 highlight Conditional ctermfg=Cyan
 highlight Repeat ctermfg=Cyan
+highlight Exception ctermfg=Cyan
 highlight PreProc ctermfg=NONE
 highlight Type ctermfg=NONE
 highlight Underlined ctermfg=NONE
@@ -89,9 +90,15 @@ highlight javaScriptFunction ctermfg=Cyan
 highlight javaScriptValue ctermfg=Green
 
 "
+" pangloss/vim-javascript
+"
+highlight jsStorageClass ctermfg=Cyan
+highlight jsFunction ctermfg=Cyan
+highlight jsReturn ctermfg=Cyan
+
+"
 " python.vim
 "
-highlight pythonException ctermfg=Cyan
 highlight pythonInclude ctermfg=Cyan
 highlight pythonStatement ctermfg=Cyan
 

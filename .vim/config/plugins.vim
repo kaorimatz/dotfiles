@@ -167,6 +167,16 @@ if neobundle#tap('unite-outline')
 endif
 
 "
+" vim-javascript
+"
+NeoBundleLazy 'pangloss/vim-javascript', {
+      \   'vim_version': '7.4.7',
+      \   'autoload': {
+      \     'filetypes': 'javascript',
+      \   },
+      \ }
+
+"
 " vim-quickrun
 "
 NeoBundleLazy 'thinca/vim-quickrun', {
