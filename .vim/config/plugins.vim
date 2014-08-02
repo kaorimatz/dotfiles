@@ -137,6 +137,7 @@ if neobundle#tap('unite.vim')
   nmap <Space>u [unite]
   noremap <silent> [unite]a :<C-u>Unite file_rec/async<CR>
   noremap <silent> [unite]b :<C-u>Unite buffer<CR>
+  noremap <silent> [unite]g :<C-u>Unite file_rec/git<CR>
   call neobundle#untap()
 endif
 
