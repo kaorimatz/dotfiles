@@ -14,15 +14,15 @@ set toolbars=none,navigation
 " Hints
 "
 autocmd LocationChange .* -javascript delete tabs.options.hinttags
-autocmd LocationChange 'b\.hatena\.ne\.jp/search'               setlocal hinttags=//ul[@class='search-result-list']/li/h3/a
-autocmd LocationChange 'github\.com/search'                     setlocal hinttags=//h3[@class='repolist-name']/a
-autocmd LocationChange 'metacpan\.org/search'                   setlocal hinttags=//div[@class='module-result']/big/strong/a
-autocmd LocationChange 'scholar\.google\.(com|co\.jp)/scholar'  setlocal hinttags=//h3[@class='gs_rt']/a
-autocmd LocationChange 'search\.cpan\.org/search'               setlocal hinttags=//h2[@class='sr']/a
-autocmd LocationChange 'stackoverflow\.com/questions'           setlocal hinttags=//a[@class='question-hyperlink']
-autocmd LocationChange 'stackoverflow\.com/search'              setlocal hinttags=//div[@class='result-link']/span/a
-autocmd LocationChange 'www\.google\.(com|co\.jp)/(search|#q=)' setlocal hinttags=//h3[@class='r']/a
-autocmd LocationChange 'www\.reddit\.com'                       setlocal hinttags=//p[@class='title']/a
+autocmd LocationChange 'b\.hatena\.ne\.jp/search'               setlocal hinttags=//ul[contains(concat(' ', @class, ' '), ' search-result-list ')]/li/h3/a
+autocmd LocationChange 'github\.com/search'                     setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' repolist-name ')]/a
+autocmd LocationChange 'metacpan\.org/search'                   setlocal hinttags=//div[contains(concat(' ', @class, ' '), ' module-result ')]/big/strong/a
+autocmd LocationChange 'scholar\.google\.(com|co\.jp)/scholar'  setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' gs_rt ')]/a
+autocmd LocationChange 'search\.cpan\.org/search'               setlocal hinttags=//h2[contains(concat(' ', @class, ' '), ' sr ')]/a
+autocmd LocationChange 'stackoverflow\.com/questions'           setlocal hinttags=//a[contains(concat(' ', @class, ' '), ' question-hyperlink ')]
+autocmd LocationChange 'stackoverflow\.com/search'              setlocal hinttags=//div[contains(concat(' ', @class, ' '), ' result-link ')]/span/a
+autocmd LocationChange 'www\.google\.(com|co\.jp)/(search|#q=)' setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' r ')]/a
+autocmd LocationChange 'www\.reddit\.com'                       setlocal hinttags=//p[contains(concat(' ', @class, ' '), ' title ')]/a
 
 "
 " Key Mappings
