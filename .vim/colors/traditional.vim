@@ -71,11 +71,23 @@ highlight diffChanged ctermfg=Blue
 highlight diffRemoved ctermfg=Red
 
 "
+" erlang.vim
+"
+highlight erlangKeyword ctermfg=Cyan
+
+"
 " go.vim
 "
 highlight goDeclType ctermfg=Cyan
 highlight goDeclaration ctermfg=Cyan
 highlight goDirective ctermfg=Cyan
+
+"
+" haskell.vim
+"
+highlight hsStructure ctermfg=Cyan
+highlight hsImport ctermfg=Cyan
+highlight hsStatement ctermfg=Cyan
 
 "
 " java.vim
