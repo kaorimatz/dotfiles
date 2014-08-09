@@ -23,6 +23,7 @@ autocmd LocationChange 'stackoverflow\.com/questions'           setlocal hinttag
 autocmd LocationChange 'stackoverflow\.com/search'              setlocal hinttags=//div[contains(concat(' ', @class, ' '), ' result-link ')]/span/a
 autocmd LocationChange 'www\.google\.(com|co\.jp)/(search|#q=)' setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' r ')]/a
 autocmd LocationChange 'www\.reddit\.com'                       setlocal hinttags=//p[contains(concat(' ', @class, ' '), ' title ')]/a
+autocmd LocationChange 'pinboard\.in'                           setlocal hinttags=//a[contains(concat(' ', @class, ' '), ' bookmark_title ')]
 
 "
 " Key Mappings
