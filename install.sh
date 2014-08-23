@@ -50,6 +50,11 @@ has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
 
 has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
 
+if has peco; then
+  mkdir -p "$HOME/.peco"
+  symlink "$dotfiles/.peco/config.json" "$HOME/.peco/config.json"
+fi
+
 if has percol; then
   mkdir -p "$HOME/.percol.d"
   symlink "$dotfiles/.percol.d/rc.py" "$HOME/.percol.d/rc.py"

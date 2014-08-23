@@ -1,0 +1,8 @@
+{
+    "Prompt": ">",
+    "Style": {
+        "SavedSelection": ["cyan", "reverse"],
+        "Selected": ["yellow", "reverse"],
+        "Matched": ["red"]
+    }
+}
