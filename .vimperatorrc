@@ -15,7 +15,7 @@ set toolbars=none,navigation
 "
 autocmd LocationChange .* -javascript delete tabs.options.hinttags
 autocmd LocationChange 'b\.hatena\.ne\.jp/search'               setlocal hinttags=//ul[contains(concat(' ', @class, ' '), ' search-result-list ')]/li/h3/a
-autocmd LocationChange 'github\.com/search'                     setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' repolist-name ')]/a
+autocmd LocationChange 'github\.com/search'                     setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' repo-list-name ')]/a
 autocmd LocationChange 'metacpan\.org/search'                   setlocal hinttags=//div[contains(concat(' ', @class, ' '), ' module-result ')]/big/strong/a
 autocmd LocationChange 'scholar\.google\.(com|co\.jp)/scholar'  setlocal hinttags=//h3[contains(concat(' ', @class, ' '), ' gs_rt ')]/a
 autocmd LocationChange 'search\.cpan\.org/search'               setlocal hinttags=//h2[contains(concat(' ', @class, ' '), ' sr ')]/a
