@@ -10,9 +10,9 @@ endif
 call neobundle#begin()
 
 "
-" go-vim
+" vim-go-extra
 "
-NeoBundleLazy 'vim-jp/go-vim', {
+NeoBundleLazy 'vim-jp/vim-go-extra', {
       \   'autoload': {
       \     'filetypes': 'go',
       \   },
