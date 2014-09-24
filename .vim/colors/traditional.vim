@@ -73,14 +73,28 @@ highlight diffRemoved ctermfg=Red
 "
 " erlang.vim
 "
+highlight erlangAttribute ctermfg=Cyan
+highlight erlangDefine ctermfg=Cyan
+highlight erlangInclude ctermfg=Cyan
 highlight erlangKeyword ctermfg=Cyan
+highlight erlangPreCondit ctermfg=Cyan
+highlight erlangRecordDef ctermfg=Cyan
+highlight erlangType ctermfg=Cyan
 
 "
 " go.vim
 "
+highlight goComplexes ctermfg=Red
+highlight goConstants ctermfg=Green
 highlight goDeclType ctermfg=Cyan
 highlight goDeclaration ctermfg=Cyan
 highlight goDirective ctermfg=Cyan
+highlight goFloats ctermfg=Red
+highlight goLabel ctermfg=Cyan
+highlight goSignedInts ctermfg=Red
+highlight goStatement ctermfg=Cyan
+highlight goType ctermfg=Red
+highlight goUnsignedInts ctermfg=Red
 
 "
 " haskell.vim
@@ -93,6 +107,7 @@ highlight hsStatement ctermfg=Cyan
 " java.vim
 "
 highlight javaExternal ctermfg=Cyan
+highlight javaStatement ctermfg=Cyan
 highlight javaStorageClass ctermfg=Cyan
 
 "
@@ -104,9 +119,15 @@ highlight javaScriptValue ctermfg=Green
 "
 " pangloss/vim-javascript
 "
-highlight jsStorageClass ctermfg=Cyan
 highlight jsFunction ctermfg=Cyan
 highlight jsReturn ctermfg=Cyan
+highlight jsStatement ctermfg=Cyan
+highlight jsStorageClass ctermfg=Cyan
+
+"
+" php.vim
+"
+highlight phpStatement ctermfg=Cyan
 
 "
 " python.vim
@@ -119,4 +140,17 @@ highlight pythonStatement ctermfg=Cyan
 "
 highlight rubyControl ctermfg=Cyan
 highlight rubyDefine ctermfg=Cyan
+highlight rubyKeyword ctermfg=Cyan
+highlight rubySharpBang ctermfg=LightGray
 highlight rubyStringDelimiter ctermfg=Yellow
+highlight rubySymbol ctermfg=Yellow
+
+"
+" sh.vim
+"
+highlight default link shCaseBar NONE
+highlight default link shNumber NONE
+highlight default link shTestOpr NONE
+highlight shQuote ctermfg=Yellow
+highlight shLoop ctermfg=Cyan
+highlight shFunctionKey ctermfg=Cyan

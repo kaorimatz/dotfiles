@@ -41,12 +41,14 @@ autocmd vimrc FileType ruby call s:set_indent(2)
 autocmd vimrc FileType sh call s:set_indent(2)
 autocmd vimrc FileType vim call s:set_indent(2)
 
+let g:loaded_2html_plugin = 1
 let g:loaded_getscriptPlugin = 1
 let g:loaded_netrwPlugin = 1
 let g:loaded_rrhelper = 1
 let g:loaded_spellfile_plugin = 1
-let g:loaded_2html_plugin = 1
 let g:loaded_vimballPlugin = 1
+let g:ruby_no_expensive = 1
+let g:ruby_no_special_methods = 1
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
