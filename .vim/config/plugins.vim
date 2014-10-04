@@ -10,15 +10,6 @@ endif
 call neobundle#begin()
 
 "
-" vim-go-extra
-"
-NeoBundleLazy 'vim-jp/vim-go-extra', {
-      \   'autoload': {
-      \     'filetypes': 'go',
-      \   },
-      \ }
-
-"
 " neobundle.vim
 "
 NeoBundleFetch 'Shougo/neobundle.vim', {
@@ -166,6 +157,24 @@ if neobundle#tap('unite-outline')
   noremap <silent> [unite]o :<C-u>Unite outline<CR>
   call neobundle#untap()
 endif
+
+"
+" vim-coffee-script
+"
+NeoBundleLazy 'kchmck/vim-coffee-script', {
+      \   'autoload': {
+      \     'filetypes': 'coffee',
+      \   },
+      \ }
+
+"
+" vim-go-extra
+"
+NeoBundleLazy 'vim-jp/vim-go-extra', {
+      \   'autoload': {
+      \     'filetypes': 'go',
+      \   },
+      \ }
 
 "
 " vim-javascript

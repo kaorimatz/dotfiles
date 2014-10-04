@@ -64,6 +64,11 @@ highlight Error cterm=underline ctermfg=Red ctermbg=NONE
 highlight Todo cterm=underline ctermfg=Yellow ctermbg=NONE
 
 "
+" kchmck/vim-coffee-script
+"
+highlight coffeeKeyword ctermfg=Cyan
+
+"
 " diff.vim
 "
 highlight diffAdded ctermfg=Green
