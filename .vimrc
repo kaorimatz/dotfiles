@@ -31,11 +31,13 @@ function! s:set_indent(spaces)
   execute 'setlocal softtabstop=' . a:spaces
 endfunction
 
+autocmd vimrc FileType css call s:set_indent(2)
 autocmd vimrc FileType html call s:set_indent(2)
 autocmd vimrc FileType java call s:set_indent(4)
 autocmd vimrc FileType javascript call s:set_indent(2)
 autocmd vimrc FileType markdown call s:set_indent(4)
 autocmd vimrc FileType perl call s:set_indent(4)
+autocmd vimrc FileType php call s:set_indent(4)
 autocmd vimrc FileType python call s:set_indent(4)
 autocmd vimrc FileType ruby call s:set_indent(2)
 autocmd vimrc FileType sh call s:set_indent(2)
