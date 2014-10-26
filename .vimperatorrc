@@ -38,6 +38,11 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 "
+" Appearance
+"
+colorscheme traditional
+
+"
 " RC Files
 "
 source! ~/.vimperatorrc.js

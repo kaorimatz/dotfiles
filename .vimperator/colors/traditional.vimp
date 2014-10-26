@@ -1,0 +1,325 @@
+"
+" #00aa90 Aomidori
+" #08192d Kachi-iro
+" #2e5c6e Omeshionando
+" #2ea9df Tsuyukusa-iro
+" #bdc0ba Shironezumi
+" #cc543a Ake
+" #e98b2a Beniukon
+" #fcfaf2 Shironeri
+" #fffffb Gofun
+"
+
+"
+" Hint
+"
+highlight Hint <<CSS
+  width: 2em;
+  font-family: monospace;
+  color: #00aa90;
+  text-align: center;
+  background-color: #fcfaf2;
+  border: 2px solid #00aa90;
+  border-radius: 4px;
+CSS
+highlight HintElem <<CSS
+  /* no style */
+CSS
+highlight HintActive <<CSS
+  color: #cc543a;
+CSS
+
+"
+" Frame
+"
+highlight FrameIndicator -append <<CSS
+  background-color: #08192d;
+CSS
+
+"
+" Separator
+"
+highlight ContentSeparator <<CSS
+  /* no style */
+CSS
+
+"
+" Normal
+"
+highlight Normal <<CSS
+  /* no style */
+CSS
+
+"
+" Completions
+"
+highlight CompGroup <<CSS
+  /* no style */
+CSS
+highlight CompGroup:not(:first-of-type) <<CSS
+  /* no style */
+CSS
+highlight CompTitle <<CSS
+  height: 2em;
+  font-family: sans-serif;
+  color: #fcfaf2;
+  background-color: #08192d;
+CSS
+highlight CompTitle>* <<CSS
+  text-align: center;
+CSS
+highlight CompItem>* <<CSS
+  /* no style */
+CSS
+highlight CompItem:nth-child(even) <<CSS
+  background-color: #fffffb;
+CSS
+highlight CompItem[selected] <<CSS
+  background-color: #bdc0ba;
+CSS
+highlight CompDesc -append <<CSS
+  padding-left: 1em;
+  color: inherit;
+CSS
+highlight Normal>*[key=noCompletions] <<CSS
+  height: 2em;
+  font-family: sans-serif;
+  color: #fcfaf2;
+  text-align: center;
+  background-color: #08192d;
+CSS
+highlight Title <<CSS
+  /* no style */
+CSS
+highlight URL <<CSS
+  text-decoration: underline;
+CSS
+highlight Indicator <<CSS
+  /* no style */
+CSS
+highlight NonText <<CSS
+  display: none;
+CSS
+highlight Filter <<CSS
+  color: #00aa90;
+  background-color: #fcfaf2;
+  border: 1px solid #00aa90;
+CSS
+
+"
+" StatusLine
+"
+highlight StatusLine <<CSS
+  /* no style */
+CSS
+
+"
+" Message
+"
+highlight InfoMsg <<CSS
+  /* no style */
+CSS
+highlight MoreMsg <<CSS
+  color: #08192d;
+CSS
+highlight WarningMsg <<CSS
+  color: #e98b2a;
+CSS
+highlight ErrorMsg <<CSS
+  color: #cc543a;
+CSS
+highlight LineNr <<CSS
+  /* no style */
+CSS
+
+"
+" Mode
+"
+highlight ModeMsg <<CSS
+  padding: 0 4px;
+  color: #fcfaf2;
+  background-color: #00aa90;
+CSS
+
+"
+" CommandLine
+"
+highlight CmdLine <<CSS
+  background-color: #fcfaf2;
+CSS
+highlight Prompt <<CSS
+  width: 4px;
+CSS
+highlight PromptText <<CSS
+  padding: 3px 5px 2px 5px;
+  color: #fcfaf2;
+  background-color: #00aa90;
+CSS
+
+"
+" Add-ons
+"
+highlight Disabled <<CSS
+  /* no style */
+CSS
+highlight Enabled <<CSS
+  /* no style */
+CSS
+
+"
+" Bookmarks
+"
+highlight Keyword <<CSS
+  /* no style */
+CSS
+highlight Tag <<CSS
+  /* no style */
+CSS
+
+"
+" Mappings
+"
+highlight Mapping <<CSS
+  /* no style */
+CSS
+
+"
+" Help
+"
+highlight Help -append <<CSS
+  font-family: sans-serif;
+CSS
+highlight HelpBody <<CSS
+  width: 768px;
+  margin: 2em auto;
+CSS
+highlight HelpCode -append <<CSS
+  font-family: monospace;
+CSS
+highlight HelpSpec -append <<CSS
+  font-family: monospace;
+  color: #cc543a;
+CSS
+highlight HelpArg <<CSS
+  font-family: monospace;
+  color: #00aa90;
+CSS
+highlight HelpOptionalArg <<CSS
+  font-family: monospace;
+  color: #00aa90;
+CSS
+highlight HelpLink -append <<CSS
+  color: #2ea9df;
+CSS
+highlight HelpHead -append <<CSS
+  margin-top: 3em;
+  color: #2e5c6e;
+CSS
+highlight HelpSubhead -append <<CSS
+  margin-top: 2em;
+  color: #2e5c6e;
+CSS
+highlight HelpSubsubhead -append <<CSS
+  margin-top: 1em;
+  color: #2e5c6e;
+CSS
+highlight HelpKey <<CSS
+  font-family: monospace;
+CSS
+highlight HelpEx <<CSS
+  font-family: monospace;
+CSS
+highlight HelpString -append <<CSS
+  font-family: monospace;
+  color: #e98b2a;
+  vertical-align: baseline;
+CSS
+highlight HelpNote -append <<CSS
+  color: #cc543a;
+CSS
+highlight HelpWarning -append <<CSS
+  color: #cc543a;
+CSS
+highlight HelpTag -append <<CSS
+  font-family: monospace;
+  font-weight: normal;
+  color: #bdc0ba;
+CSS
+highlight HelpItem -append <<CSS
+  margin-right: 0;
+CSS
+highlight HelpBorder -append <<CSS
+  border-color: #fcfaf2;
+CSS
+
+"
+" JavaScript
+"
+highlight Boolean <<CSS
+  font-family: monospace;
+  color: #00aa90;
+CSS
+highlight Number <<CSS
+  font-family: monospace;
+  color: #00aa90;
+CSS
+highlight String <<CSS
+  font-family: monospace;
+  color: #e98b2a;
+CSS
+highlight Null <<CSS
+  color: #00aa90;
+CSS
+highlight Function <<CSS
+  /* no style */
+CSS
+highlight Object <<CSS
+  /* no style */
+CSS
+
+"
+" Style
+"
+style -name=vimperator chrome://vimperator/*,chrome://liberator/*,chrome://browser/* <<CSS
+#liberator-multiline-output-content {
+  font-family: sans-serif !important;
+  font-size: 12px !important;
+  line-height: 2em !important;
+  color: #08192d !important;
+  background-color: #fcfaf2 !important;
+}
+
+#liberator-completions-content {
+  font-size: 12px !important;
+  font-family: monospace !important;
+  line-height: 2em !important;
+  color: #08192d !important;
+  background-color: #fcfaf2 !important;
+}
+
+#liberator-bottombar {
+  font-size: 12px !important;
+  font-family: monospace !important;
+  line-height: 2em !important;
+  color: #08192d !important;
+  background-color: #fcfaf2 !important;
+  border-top: 1px solid #bdc0ba !important;
+}
+
+#liberator-multiline-output-content a.hl-Title {
+  display: block !important;
+  color: #fcfaf2 !important;
+  text-align: center !important;
+  background-color: #08192d !important;
+}
+CSS
+
+"
+" Preferences
+"
+set! ui.textHighlightBackground=#2e5c6e
+set! ui.textHighlightForeground=#fcfaf2
+set! ui.textSelectBackground=#cc543a
+set! ui.textSelectBackgroundAttention=#00aa90
+set! ui.textSelectBackgroundDisabled=#2e5c6e
+set! ui.textSelectForeground=#fcfaf2
