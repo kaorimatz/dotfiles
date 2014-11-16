@@ -208,6 +208,9 @@ highlight HelpOptionalArg <<CSS
   font-family: monospace;
   color: #00aa90;
 CSS
+highlight HelpOpt <<CSS
+  font-family: monospace;
+CSS
 highlight HelpLink -append <<CSS
   color: #2ea9df;
 CSS
