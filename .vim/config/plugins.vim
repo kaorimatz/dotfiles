@@ -3,7 +3,9 @@ if !isdirectory(expand('~/.vim/bundle/neobundle.vim'))
 endif
 
 if has('vim_starting')
-  set nocompatible
+  if &compatible
+    set nocompatible
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
