@@ -64,9 +64,22 @@ highlight Error cterm=underline ctermfg=Red ctermbg=NONE
 highlight Todo cterm=underline ctermfg=Yellow ctermbg=NONE
 
 "
+" c.vim
+"
+highlight cStatement ctermfg=Cyan
+highlight cStorageClass ctermfg=Cyan
+highlight cStructure ctermfg=Cyan
+highlight cType ctermfg=Red
+
+"
 " kchmck/vim-coffee-script
 "
 highlight coffeeKeyword ctermfg=Cyan
+
+"
+" cpp.vim
+"
+highlight cppStatement ctermfg=Cyan
 
 "
 " diff.vim
@@ -159,3 +172,13 @@ highlight default link shTestOpr NONE
 highlight shQuote ctermfg=Yellow
 highlight shLoop ctermfg=Cyan
 highlight shFunctionKey ctermfg=Cyan
+
+"
+" unite.vim
+"
+highlight default link uniteStatusNormal StatusLine
+highlight default link uniteStatusHead StatusLine
+highlight default link uniteStatusSourceNames StatusLine
+highlight default link uniteStatusSourceCandidates StatusLine
+highlight default link uniteStatusMessage StatusLine
+highlight default link uniteStatusLineNR StatusLine

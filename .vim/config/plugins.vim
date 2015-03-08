@@ -124,6 +124,11 @@ NeoBundleLazy 'Shougo/unite.vim', {
       \   },
       \ }
 if neobundle#tap('unite.vim')
+  function! neobundle#tapped.hooks.on_source(bundle)
+    call unite#custom#profile('default', 'context', {
+          \   'cursor_line_highlight': 'PmenuSel',
+          \ })
+  endfunction
   nnoremap [unite] <Nop>
   nmap <Space>u [unite]
   noremap <silent> [unite]a :<C-u>Unite file_rec/async<CR>
