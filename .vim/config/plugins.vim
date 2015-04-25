@@ -194,6 +194,15 @@ NeoBundleLazy 'pangloss/vim-javascript', {
       \ }
 
 "
+" vim-json
+"
+NeoBundleLazy 'mitsuhiko/vim-json', {
+      \   'autoload': {
+      \     'filetypes': 'json',
+      \   },
+      \ }
+
+"
 " vim-quickrun
 "
 NeoBundleLazy 'thinca/vim-quickrun', {
