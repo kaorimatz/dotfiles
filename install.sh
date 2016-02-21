@@ -82,7 +82,10 @@ if has vim; then
   symlink "$dotfiles/.vim/config/plugins.vim" "$HOME/.vim/config/plugins.vim"
 fi
 
-has weechat && symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
+if has weechat; then
+  mkdir -p "$HOME/.weechat"
+  symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
+fi
 
 if has zsh; then
   symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
