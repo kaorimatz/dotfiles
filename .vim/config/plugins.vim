@@ -175,6 +175,15 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {
       \ }
 
 "
+" vim-elixir
+"
+NeoBundleLazy 'elixir-lang/vim-elixir', {
+      \   'autoload': {
+      \     'filetypes': ['eelixir', 'elixir'],
+      \   },
+      \ }
+
+"
 " vim-go-extra
 "
 NeoBundleLazy 'vim-jp/vim-go-extra', {
