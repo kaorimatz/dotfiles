@@ -1,8 +1,8 @@
 (function () {
   let rtp = options['runtimepath'];
-  let root = File.joinPaths(rtp, 'src/github.com/vimpr/vimperator-plugins');
-  let loader = File.joinPaths(root.path, 'plugin_loader.js');
-  let libly = File.joinPaths(root.path, '_libly.js');
+  let root = io.File.joinPaths(rtp, 'src/github.com/vimpr/vimperator-plugins');
+  let loader = io.File.joinPaths(root.path, 'plugin_loader.js');
+  let libly = io.File.joinPaths(root.path, '_libly.js');
   if (!loader.exists() || !loader.isFile() || !loader.isReadable()) {
     return;
   }
