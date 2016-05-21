@@ -240,8 +240,7 @@ endif
 "
 " vimperator
 "
-NeoBundleLazy 'http://code.google.com/p/vimperator-labs', {
-      \   'type': 'hg',
+NeoBundleLazy 'vimperator/vimperator-labs', {
       \   'rtp': 'vimperator/contrib/vim',
       \   'autoload': {
       \     'filetypes': 'vimperator',
