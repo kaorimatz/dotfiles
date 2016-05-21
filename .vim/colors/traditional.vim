@@ -173,6 +173,12 @@ highlight rubyStringDelimiter ctermfg=Yellow
 highlight rubySymbol ctermfg=Yellow
 
 "
+" derekwyatt/vim-scala
+"
+highlight scalaKeyword ctermfg=Cyan
+highlight scalaExternal ctermfg=Cyan
+
+"
 " sh.vim
 "
 highlight default link shCaseBar NONE

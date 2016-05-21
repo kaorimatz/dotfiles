@@ -200,6 +200,13 @@ NeoBundle 'thinca/vim-quickrun', {
       \ }
 
 "
+" vim-scala
+"
+NeoBundleLazy 'derekwyatt/vim-scala', {
+      \   'on_ft': 'scala',
+      \ }
+
+"
 " vim-template
 "
 NeoBundle 'thinca/vim-template'
