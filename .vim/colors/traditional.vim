@@ -89,6 +89,13 @@ highlight diffChanged ctermfg=Blue
 highlight diffRemoved ctermfg=Red
 
 "
+" elixir-lang/vim-elixir
+"
+highlight elixirBlockDefinition ctermfg=Cyan
+highlight elixirInclude ctermfg=Cyan
+highlight elixirStringDelimiter ctermfg=Yellow
+
+"
 " erlang.vim
 "
 highlight erlangAttribute ctermfg=Cyan
@@ -124,9 +131,11 @@ highlight hsStatement ctermfg=Cyan
 "
 " java.vim
 "
+highlight javaConstant ctermfg=Green
 highlight javaExternal ctermfg=Cyan
 highlight javaStatement ctermfg=Cyan
 highlight javaStorageClass ctermfg=Cyan
+highlight javaType ctermfg=Red
 
 "
 " javascript.vim
