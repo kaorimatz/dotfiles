@@ -21,7 +21,7 @@ NeoBundleFetch 'Shougo/neobundle.vim', {
 "
 " neocomplete.vim
 "
-NeoBundleLazy 'Shougo/neocomplete.vim', {
+NeoBundle 'Shougo/neocomplete.vim', {
       \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
       \   'vim_version': '7.3.885',
       \   'disabled': !has('lua'),
@@ -49,7 +49,7 @@ endif
 "
 " neosnippet.vim
 "
-NeoBundleLazy 'Shougo/neosnippet.vim', {
+NeoBundle 'Shougo/neosnippet.vim', {
       \   'depends': ['Shougo/neocomplete.vim', 'Shougo/neosnippet-snippets'],
       \   'on_cmd': 'NeoSnippetEdit',
       \   'on_i': 1,
@@ -66,8 +66,10 @@ endif
 "
 " skk.vim
 "
-NeoBundleLazy 'tyru/skk.vim', {
-      \   'on_map': '<Plug>(skk-toggle-im)',
+NeoBundle 'tyru/skk.vim', {
+      \   'on_map': [
+      \     ['ic', '<Plug>(skk-toggle-im)']
+      \   ],
       \ }
 if neobundle#tap('skk.vim')
   imap <C-j> <Plug>(skk-toggle-im)
@@ -90,7 +92,7 @@ endif
 "
 " syntastic
 "
-NeoBundleLazy 'scrooloose/syntastic', {
+NeoBundle 'scrooloose/syntastic', {
       \   'on_cmd': 'SyntasticCheck',
       \   'on_ft': 'sh',
       \ }
@@ -106,7 +108,7 @@ endif
 "
 " unite.vim
 "
-NeoBundleLazy 'Shougo/unite.vim', {
+NeoBundle 'Shougo/unite.vim', {
       \   'depends': 'Shougo/vimproc.vim',
       \   'on_cmd': {
       \     'name': 'Unite',
@@ -130,7 +132,7 @@ endif
 "
 " unite-cpan-module
 "
-NeoBundleLazy 'kaorimatz/unite-cpan-module', {
+NeoBundle 'kaorimatz/unite-cpan-module', {
       \   'depends': 'Shougo/unite.vim',
       \ }
 if neobundle#tap('unite-cpan-module')
@@ -144,7 +146,7 @@ endif
 "
 " unite-outline
 "
-NeoBundleLazy 'Shougo/unite-outline', {
+NeoBundle 'Shougo/unite-outline', {
       \   'depends': 'Shougo/unite.vim',
       \   'external_commands': 'ctags',
       \ }
@@ -156,28 +158,28 @@ endif
 "
 " vim-coffee-script
 "
-NeoBundleLazy 'kchmck/vim-coffee-script', {
+NeoBundle 'kchmck/vim-coffee-script', {
       \   'on_ft': 'coffee',
       \ }
 
 "
 " vim-elixir
 "
-NeoBundleLazy 'elixir-lang/vim-elixir', {
+NeoBundle 'elixir-lang/vim-elixir', {
       \   'on_ft': ['eelixir', 'elixir'],
       \ }
 
 "
 " vim-go-extra
 "
-NeoBundleLazy 'vim-jp/vim-go-extra', {
+NeoBundle 'vim-jp/vim-go-extra', {
       \   'on_ft': 'go',
       \ }
 
 "
 " vim-javascript
 "
-NeoBundleLazy 'pangloss/vim-javascript', {
+NeoBundle 'pangloss/vim-javascript', {
       \   'vim_version': '7.4.7',
       \   'on_ft': 'javascript',
       \ }
@@ -185,14 +187,14 @@ NeoBundleLazy 'pangloss/vim-javascript', {
 "
 " vim-json
 "
-NeoBundleLazy 'mitsuhiko/vim-json', {
+NeoBundle 'mitsuhiko/vim-json', {
       \   'on_ft': 'json',
       \ }
 
 "
 " vim-quickrun
 "
-NeoBundleLazy 'thinca/vim-quickrun', {
+NeoBundle 'thinca/vim-quickrun', {
       \   'depends': 'Shougo/vimproc.vim',
       \   'on_cmd': 'QuickRun',
       \ }
@@ -205,7 +207,7 @@ NeoBundle 'thinca/vim-template'
 "
 " vimfiler.vim
 "
-NeoBundleLazy 'Shougo/vimfiler.vim', {
+NeoBundle 'Shougo/vimfiler.vim', {
       \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
       \   'on_path' : '.*',
       \ }
@@ -223,7 +225,7 @@ endif
 "
 " vimperator
 "
-NeoBundleLazy 'vimperator/vimperator-labs', {
+NeoBundle 'vimperator/vimperator-labs', {
       \   'rtp': 'vimperator/contrib/vim',
       \   'on_ft': 'vimperator',
       \ }
@@ -231,7 +233,7 @@ NeoBundleLazy 'vimperator/vimperator-labs', {
 "
 " vimproc.vim
 "
-NeoBundleLazy 'Shougo/vimproc.vim', {
+NeoBundle 'Shougo/vimproc.vim', {
       \   'build' : {
       \     'mac' : 'make -f make_mac.mak',
       \     'unix' : 'make -f make_unix.mak',
