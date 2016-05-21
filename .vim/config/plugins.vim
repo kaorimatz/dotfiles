@@ -25,9 +25,7 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {
       \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
       \   'vim_version': '7.3.885',
       \   'disabled': !has('lua'),
-      \   'autoload': {
-      \     'insert': 1,
-      \   },
+      \   'on_i': 1,
       \ }
 if neobundle#tap('neocomplete.vim')
   function! neobundle#tapped.hooks.on_source(bundle)
@@ -53,10 +51,8 @@ endif
 "
 NeoBundleLazy 'Shougo/neosnippet.vim', {
       \   'depends': ['Shougo/neocomplete.vim', 'Shougo/neosnippet-snippets'],
-      \   'autoload': {
-      \     'commands': 'NeoSnippetEdit',
-      \     'insert': 1,
-      \   },
+      \   'on_cmd': 'NeoSnippetEdit',
+      \   'on_i': 1,
       \ }
 if neobundle#tap('neosnippet.vim')
   function! neobundle#tapped.hooks.on_source(bundle)
@@ -71,11 +67,7 @@ endif
 " skk.vim
 "
 NeoBundleLazy 'tyru/skk.vim', {
-      \   'autoload': {
-      \     'mappings': [
-      \       ['ic', '<Plug>(skk-toggle-im)'],
-      \     ],
-      \   },
+      \   'on_map': '<Plug>(skk-toggle-im)',
       \ }
 if neobundle#tap('skk.vim')
   imap <C-j> <Plug>(skk-toggle-im)
@@ -99,10 +91,8 @@ endif
 " syntastic
 "
 NeoBundleLazy 'scrooloose/syntastic', {
-      \   'autoload': {
-      \     'commands': 'SyntasticCheck',
-      \     'filetypes': 'sh',
-      \   },
+      \   'on_cmd': 'SyntasticCheck',
+      \   'on_ft': 'sh',
       \ }
 if neobundle#tap('syntastic')
   function! neobundle#tapped.hooks.on_source(bundle)
@@ -118,11 +108,9 @@ endif
 "
 NeoBundleLazy 'Shougo/unite.vim', {
       \   'depends': 'Shougo/vimproc.vim',
-      \   'autoload': {
-      \     'commands': {
-      \       'name': 'Unite',
-      \       'complete': 'customlist,unite#complete#source',
-      \     },
+      \   'on_cmd': {
+      \     'name': 'Unite',
+      \     'complete': 'customlist,unite#complete#source',
       \   },
       \ }
 if neobundle#tap('unite.vim')
@@ -169,27 +157,21 @@ endif
 " vim-coffee-script
 "
 NeoBundleLazy 'kchmck/vim-coffee-script', {
-      \   'autoload': {
-      \     'filetypes': 'coffee',
-      \   },
+      \   'on_ft': 'coffee',
       \ }
 
 "
 " vim-elixir
 "
 NeoBundleLazy 'elixir-lang/vim-elixir', {
-      \   'autoload': {
-      \     'filetypes': ['eelixir', 'elixir'],
-      \   },
+      \   'on_ft': ['eelixir', 'elixir'],
       \ }
 
 "
 " vim-go-extra
 "
 NeoBundleLazy 'vim-jp/vim-go-extra', {
-      \   'autoload': {
-      \     'filetypes': 'go',
-      \   },
+      \   'on_ft': 'go',
       \ }
 
 "
@@ -197,18 +179,14 @@ NeoBundleLazy 'vim-jp/vim-go-extra', {
 "
 NeoBundleLazy 'pangloss/vim-javascript', {
       \   'vim_version': '7.4.7',
-      \   'autoload': {
-      \     'filetypes': 'javascript',
-      \   },
+      \   'on_ft': 'javascript',
       \ }
 
 "
 " vim-json
 "
 NeoBundleLazy 'mitsuhiko/vim-json', {
-      \   'autoload': {
-      \     'filetypes': 'json',
-      \   },
+      \   'on_ft': 'json',
       \ }
 
 "
@@ -216,9 +194,7 @@ NeoBundleLazy 'mitsuhiko/vim-json', {
 "
 NeoBundleLazy 'thinca/vim-quickrun', {
       \   'depends': 'Shougo/vimproc.vim',
-      \   'autoload': {
-      \     'commands': 'QuickRun',
-      \   },
+      \   'on_cmd': 'QuickRun',
       \ }
 
 "
@@ -231,9 +207,7 @@ NeoBundle 'thinca/vim-template'
 "
 NeoBundleLazy 'Shougo/vimfiler.vim', {
       \   'depends': ['Shougo/unite.vim', 'Shougo/vimproc.vim'],
-      \   'autoload': {
-      \     'explorer': 1,
-      \   },
+      \   'on_path' : '.*',
       \ }
 if neobundle#tap('vimfiler.vim')
   function! neobundle#tapped.hooks.on_source(bundle)
@@ -251,9 +225,7 @@ endif
 "
 NeoBundleLazy 'vimperator/vimperator-labs', {
       \   'rtp': 'vimperator/contrib/vim',
-      \   'autoload': {
-      \     'filetypes': 'vimperator',
-      \   },
+      \   'on_ft': 'vimperator',
       \ }
 
 "
