@@ -72,6 +72,13 @@ highlight cStructure ctermfg=Cyan
 highlight cType ctermfg=Red
 
 "
+" cs.vim
+"
+highlight csModifier ctermfg=Cyan
+highlight csStorage ctermfg=Cyan
+highlight csType ctermfg=Red
+
+"
 " kchmck/vim-coffee-script
 "
 highlight coffeeKeyword ctermfg=Cyan
