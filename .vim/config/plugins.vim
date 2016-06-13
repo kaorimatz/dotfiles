@@ -163,6 +163,18 @@ NeoBundle 'kchmck/vim-coffee-script', {
       \ }
 
 "
+" vim-easy-align
+"
+NeoBundle 'junegunn/vim-easy-align', {
+      \   'on_map': [
+      \     ['x', '<Plug>(EasyAlign)']
+      \   ],
+      \ }
+if neobundle#tap('vim-easy-align')
+  xmap ga <Plug>(EasyAlign)
+endif
+
+"
 " vim-elixir
 "
 NeoBundle 'elixir-lang/vim-elixir', {
