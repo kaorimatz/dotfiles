@@ -16,7 +16,10 @@ EOF
 }
 
 symlink() {
-  [ -e "$2" ] || [ -e "$2".norc ] || ln -s "$1" "$2"
+  [ -e "$2" ] || [ -e "$2".norc ] || {
+    mkdir -p "`dirname $2`"
+    ln -s "$1" "$2"
+  }
 }
 
 if [ -d "$dotfiles" ]; then
@@ -34,9 +37,7 @@ symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
 if has firefox || has_app org.mozilla.firefox; then
   symlink "$dotfiles/.vimperatorrc" "$HOME/.vimperatorrc"
   symlink "$dotfiles/.vimperatorrc.js" "$HOME/.vimperatorrc.js"
-  mkdir -p "$HOME/.vimperator/colors"
   symlink "$dotfiles/.vimperator/colors/traditional.vimp" "$HOME/.vimperator/colors/traditional.vimp"
-  mkdir -p "$HOME/.vimperator/config"
   symlink "$dotfiles/.vimperator/config/plugins.js" "$HOME/.vimperator/config/plugins.js"
 fi
 
@@ -52,15 +53,9 @@ has irb && symlink "$dotfiles/.irbrc" "$HOME/.irbrc"
 
 has lv && symlink "$dotfiles/.lv" "$HOME/.lv"
 
-if has peco; then
-  mkdir -p "$HOME/.peco"
-  symlink "$dotfiles/.peco/config.json" "$HOME/.peco/config.json"
-fi
+has peco && symlink "$dotfiles/.peco/config.json" "$HOME/.peco/config.json"
 
-if has percol; then
-  mkdir -p "$HOME/.percol.d"
-  symlink "$dotfiles/.percol.d/rc.py" "$HOME/.percol.d/rc.py"
-fi
+has percol && symlink "$dotfiles/.percol.d/rc.py" "$HOME/.percol.d/rc.py"
 
 has python && symlink "$dotfiles/.pystartup" "$HOME/.pystartup"
 
@@ -74,18 +69,12 @@ has vagrant && symlink "$dotfiles/.vagrant.d/Vagrantfile" "$HOME/.vagrant.d/Vagr
 
 if has vim; then
   symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
-  mkdir -p "$HOME/.vim"
   symlink "$dotfiles/.vim/filetype.vim" "$HOME/.vim/filetype.vim"
-  mkdir -p "$HOME/.vim/colors"
   symlink "$dotfiles/.vim/colors/traditional.vim" "$HOME/.vim/colors/traditional.vim"
-  mkdir -p "$HOME/.vim/config"
   symlink "$dotfiles/.vim/config/plugins.vim" "$HOME/.vim/config/plugins.vim"
 fi
 
-if has weechat; then
-  mkdir -p "$HOME/.weechat"
-  symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
-fi
+has weechat && symlink "$dotfiles/.weechat/startup" "$HOME/.weechat/startup"
 
 if has zsh; then
   symlink "$dotfiles/.zprofile" "$HOME/.zprofile"
