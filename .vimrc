@@ -9,6 +9,7 @@ set hlsearch
 set ignorecase
 set list
 set listchars=tab:>-
+set nowrap
 set smartcase
 set undodir=~/.vim/undo
 set undofile
