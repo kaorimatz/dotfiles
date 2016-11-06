@@ -21,6 +21,8 @@ cnoremap <C-f> <Right>
 cnoremap <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 
 augroup vimrc
   autocmd!
