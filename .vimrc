@@ -10,7 +10,7 @@ set ignorecase
 set list
 set listchars=tab:>-
 set smartcase
-set undodir=~/.vimundo
+set undodir=~/.vim/undo
 set undofile
 
 cnoremap <C-a> <Home>
