@@ -43,7 +43,10 @@ fi
 
 has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
-has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
+if has git; then
+  symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
+  symlink "$dotfiles/.gitignore_global" "$HOME/.gitignore_global"
+fi
 
 has gvim && symlink "$dotfiles/.gvimrc" "$HOME/.gvimrc"
 

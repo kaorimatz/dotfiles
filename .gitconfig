@@ -6,6 +6,8 @@
   st = status -s -b -uno
 [color]
   ui = 1
+[core]
+  excludesfile = ~/.gitignore_global
 [push]
   default = simple
 [include]
