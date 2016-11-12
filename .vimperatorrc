@@ -9,7 +9,7 @@ runtime config/plugins.js
 set complete=S
 set statuslinevisibility=visible
 set titlestring=
-set toolbars=none,navigation
+set toolbars=none
 
 "
 " Hints
