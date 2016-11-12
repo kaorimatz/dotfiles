@@ -244,8 +244,7 @@ endif
 "
 " vimperator
 "
-NeoBundle 'vimperator/vimperator-labs', {
-      \   'rtp': 'vimperator/contrib/vim',
+NeoBundle 'vimperator/vimperator.vim', {
       \   'on_ft': 'vimperator',
       \ }
 
