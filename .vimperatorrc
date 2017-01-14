@@ -12,6 +12,12 @@ set titlestring=
 set toolbars=none
 
 "
+" Firefox Preferences
+"
+set! browser.startup.page=3
+set! browser.tabs.closeWindowWithLastTab=false
+
+"
 " Hints
 "
 autocmd LocationChange .* -javascript delete tabs.options.hinttags
