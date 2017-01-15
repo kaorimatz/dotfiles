@@ -5,12 +5,15 @@ syntax on
 
 colorscheme traditional
 
+set expandtab
 set hlsearch
 set ignorecase
 set list
 set listchars=tab:>-
 set nowrap
+set shiftwidth=2
 set smartcase
+set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
 
@@ -23,28 +26,6 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
-
-augroup vimrc
-  autocmd!
-augroup END
-
-function! s:set_indent(spaces)
-  setlocal expandtab
-  execute 'setlocal shiftwidth=' . a:spaces
-  execute 'setlocal softtabstop=' . a:spaces
-endfunction
-
-autocmd vimrc FileType css call s:set_indent(2)
-autocmd vimrc FileType html call s:set_indent(2)
-autocmd vimrc FileType java call s:set_indent(4)
-autocmd vimrc FileType javascript call s:set_indent(2)
-autocmd vimrc FileType markdown call s:set_indent(4)
-autocmd vimrc FileType perl call s:set_indent(4)
-autocmd vimrc FileType php call s:set_indent(4)
-autocmd vimrc FileType python call s:set_indent(4)
-autocmd vimrc FileType ruby call s:set_indent(2)
-autocmd vimrc FileType sh call s:set_indent(2)
-autocmd vimrc FileType vim call s:set_indent(2)
 
 let g:loaded_2html_plugin = 1
 let g:loaded_getscriptPlugin = 1

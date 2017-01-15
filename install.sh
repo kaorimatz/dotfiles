@@ -72,9 +72,7 @@ has vagrant && symlink "$dotfiles/.vagrant.d/Vagrantfile" "$HOME/.vagrant.d/Vagr
 
 if has vim; then
   symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
-  symlink "$dotfiles/.vim/filetype.vim" "$HOME/.vim/filetype.vim"
-  symlink "$dotfiles/.vim/colors/traditional.vim" "$HOME/.vim/colors/traditional.vim"
-  symlink "$dotfiles/.vim/config/plugins.vim" "$HOME/.vim/config/plugins.vim"
+  symlink "$dotfiles/.vim" "$HOME/.vim"
   mkdir -p "$HOME/.vim/undo"
 fi
 
