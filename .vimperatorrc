@@ -14,8 +14,11 @@ set toolbars=none
 "
 " Firefox Preferences
 "
+set! browser.formfill.enable=false
+set! browser.newtabpage.enabled=false
 set! browser.startup.page=3
 set! browser.tabs.closeWindowWithLastTab=false
+set! signon.rememberSignons=false
 
 "
 " Hints
