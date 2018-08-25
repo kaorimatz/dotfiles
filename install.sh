@@ -28,8 +28,6 @@ else
   git clone https://github.com/kaorimatz/dotfiles "$dotfiles"
 fi
 
-has ack && symlink "$dotfiles/.ackrc" "$HOME/.ackrc"
-
 has curl && symlink "$dotfiles/.curlrc" "$HOME/.curlrc"
 
 symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
