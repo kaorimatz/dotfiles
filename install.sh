@@ -28,8 +28,6 @@ else
   git clone https://github.com/kaorimatz/dotfiles "$dotfiles"
 fi
 
-has curl && symlink "$dotfiles/.curlrc" "$HOME/.curlrc"
-
 symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
 
 if has firefox || has_app org.mozilla.firefox; then
