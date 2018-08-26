@@ -1,12 +1,12 @@
 [color]
-  ui = auto
+	ui = auto
 [commit]
-  gpgSign = true
+	gpgSign = true
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
-  default = simple
+	default = simple
 [tag]
-  forceSignAnnotated = true
+	forceSignAnnotated = true
 [include]
-  path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
