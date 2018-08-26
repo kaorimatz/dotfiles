@@ -180,6 +180,14 @@ highlight rubyStringDelimiter ctermfg=Yellow
 highlight rubySymbol ctermfg=Yellow
 
 "
+" rust.vim
+"
+highlight rustKeyword ctermfg=Cyan
+highlight rustStorage ctermfg=Cyan
+highlight rustStructure ctermfg=Cyan
+highlight rustType ctermfg=Red
+
+"
 " derekwyatt/vim-scala
 "
 highlight scalaKeyword ctermfg=Cyan
