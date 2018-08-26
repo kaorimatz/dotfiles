@@ -4,5 +4,8 @@
         "SavedSelection": ["cyan", "reverse"],
         "Selected": ["yellow", "reverse"],
         "Matched": ["red"]
+    },
+    "Keymap": {
+      "C-i": "peco.ToggleSelectionAndSelectNext"
     }
 }
