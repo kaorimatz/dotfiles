@@ -10,5 +10,7 @@
   excludesfile = ~/.gitignore_global
 [push]
   default = simple
+[tag]
+  forceSignAnnotated = true
 [include]
   path = ~/.gitconfig.local
