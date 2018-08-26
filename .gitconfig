@@ -1,5 +1,5 @@
 [color]
-  ui = 1
+  ui = auto
 [commit]
   gpgSign = true
 [core]
