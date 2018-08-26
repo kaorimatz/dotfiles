@@ -90,22 +90,6 @@ if neobundle#tap('skk.vim')
 endif
 
 "
-" syntastic
-"
-NeoBundle 'scrooloose/syntastic', {
-      \   'on_cmd': 'SyntasticCheck',
-      \   'on_ft': 'sh',
-      \ }
-if neobundle#tap('syntastic')
-  function! neobundle#tapped.hooks.on_source(bundle)
-    let g:syntastic_mode_map = {
-          \   'mode': 'passive',
-          \ }
-  endfunction
-  call neobundle#untap()
-endif
-
-"
 " unite.vim
 "
 NeoBundle 'Shougo/unite.vim', {
@@ -130,20 +114,6 @@ if neobundle#tap('unite.vim')
 endif
 
 "
-" unite-cpan-module
-"
-NeoBundle 'kaorimatz/unite-cpan-module', {
-      \   'depends': 'Shougo/unite.vim',
-      \ }
-if neobundle#tap('unite-cpan-module')
-  function! neobundle#tapped.hooks.on_source(bundle)
-    highlight uniteSource__CpanModule_Date ctermfg=Green
-    highlight uniteSource__CpanModule_Author ctermfg=Red
-  endfunction
-  call neobundle#untap()
-endif
-
-"
 " unite-outline
 "
 NeoBundle 'Shougo/unite-outline', {
@@ -161,18 +131,6 @@ endif
 NeoBundle 'kchmck/vim-coffee-script', {
       \   'on_ft': 'coffee',
       \ }
-
-"
-" vim-easy-align
-"
-NeoBundle 'junegunn/vim-easy-align', {
-      \   'on_map': [
-      \     ['x', '<Plug>(EasyAlign)']
-      \   ],
-      \ }
-if neobundle#tap('vim-easy-align')
-  xmap ga <Plug>(EasyAlign)
-endif
 
 "
 " vim-elixir
@@ -226,11 +184,6 @@ NeoBundleLazy 'derekwyatt/vim-scala', {
       \ }
 
 "
-" vim-template
-"
-NeoBundle 'thinca/vim-template'
-
-"
 " vimfiler.vim
 "
 NeoBundle 'Shougo/vimfiler.vim', {
@@ -247,13 +200,6 @@ if neobundle#tap('vimfiler.vim')
   endfunction
   call neobundle#untap()
 endif
-
-"
-" vimperator
-"
-NeoBundle 'vimperator/vimperator.vim', {
-      \   'on_ft': 'vimperator',
-      \ }
 
 "
 " vimproc.vim
