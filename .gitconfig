@@ -6,6 +6,8 @@
   st = status -s -b -uno
 [color]
   ui = 1
+[commit]
+  gpgSign = true
 [core]
   excludesfile = ~/.gitignore_global
 [push]
