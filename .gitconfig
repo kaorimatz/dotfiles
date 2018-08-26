@@ -3,8 +3,6 @@
 [commit]
 	gpgSign = true
 	verbose = true
-[core]
-	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [tag]

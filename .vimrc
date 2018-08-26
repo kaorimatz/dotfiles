@@ -5,6 +5,7 @@ syntax on
 
 colorscheme traditional
 
+set directory=~/.vim/swap
 set expandtab
 set hlsearch
 set ignorecase
@@ -16,6 +17,13 @@ set smartcase
 set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
+
+if !isdirectory(&directory)
+  call mkdir(&directory, 'p')
+endif
+if !isdirectory(&undodir)
+  call mkdir(&undodir, 'p')
+endif
 
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
