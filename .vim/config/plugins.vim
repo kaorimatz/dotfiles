@@ -204,6 +204,13 @@ NeoBundle 'mitsuhiko/vim-json', {
       \ }
 
 "
+" vim-jsonnet
+"
+NeoBundle 'google/vim-jsonnet', {
+      \   'on_ft': 'jsonnet',
+      \ }
+
+"
 " vim-quickrun
 "
 NeoBundle 'thinca/vim-quickrun', {
