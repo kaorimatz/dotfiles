@@ -5,6 +5,8 @@ syntax on
 
 colorscheme traditional
 
+set backupdir=~/.vim/backup
+set backupext=.bak
 set directory=~/.vim/swap
 set expandtab
 set hlsearch
@@ -18,6 +20,9 @@ set softtabstop=-1
 set undodir=~/.vim/undo
 set undofile
 
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, 'p')
+endif
 if !isdirectory(&directory)
   call mkdir(&directory, 'p')
 endif
