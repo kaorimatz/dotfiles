@@ -30,13 +30,6 @@ fi
 
 symlink "$dotfiles/.dir_colors" "$HOME/.dir_colors"
 
-if has firefox || has_app org.mozilla.firefox; then
-  symlink "$dotfiles/.vimperatorrc" "$HOME/.vimperatorrc"
-  symlink "$dotfiles/.vimperatorrc.js" "$HOME/.vimperatorrc.js"
-  symlink "$dotfiles/.vimperator/colors/traditional.vimp" "$HOME/.vimperator/colors/traditional.vimp"
-  symlink "$dotfiles/.vimperator/config/plugins.js" "$HOME/.vimperator/config/plugins.js"
-fi
-
 has gem && symlink "$dotfiles/.gemrc" "$HOME/.gemrc"
 
 if has git; then
