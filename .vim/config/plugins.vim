@@ -12,11 +12,47 @@ endif
 call dein#begin('~/.cache/dein')
 
 "
+" denite.nvim
+"
+call dein#add('Shougo/denite.nvim', {
+      \   'if': has('nvim') && has('python3'),
+      \   'on_cmd': 'Denite',
+      \ })
+if dein#tap('denite.nvim')
+  function! g:dein#plugin.hook_source()
+    call denite#custom#option('default', 'statusline', 0)
+    call denite#custom#option('default', 'prompt', '>')
+    call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+    call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+    call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+    call denite#custom#var('file/rec/git', 'command', ['git', 'ls-files'])
+  endfunction
+  nnoremap [denite] <Nop>
+  nmap <Space>u [denite]
+  noremap <silent> [denite]a :<C-u>Denite file/rec<CR>
+  noremap <silent> [denite]b :<C-u>Denite buffer<CR>
+  noremap <silent> [denite]g :<C-u>Denite file/rec/git<CR>
+endif
+
+"
+" deoplete.nvim
+"
+call dein#add('Shougo/deoplete.nvim', {
+      \   'if': has('nvim') && has('python3'),
+      \   'on_i': 1,
+      \ })
+if dein#tap('deoplete.nvim')
+  function! g:dein#plugin.hook_source()
+    let g:deoplete#enable_at_startup = 1
+  endfunction
+endif
+
+"
 " neocomplete.vim
 "
 call dein#add('Shougo/neocomplete.vim', {
       \   'depends': ['unite.vim', 'vimproc.vim'],
-      \   'if': has('lua'),
+      \   'if': !has('nvim') && has('lua'),
       \   'on_i': 1,
       \ })
 if dein#tap('neocomplete.vim')
@@ -29,11 +65,14 @@ endif
 " neomru.vim
 "
 call dein#add('Shougo/neomru.vim', {
-      \   'depends': 'unite.vim',
+      \   'depends': has('nvim') ? 'unite.vim' : 'denite.nvim',
       \ })
 if dein#tap('neomru.vim')
-  noremap <silent> [unite]d :<C-u>Unite -default-action=lcd neomru/directory directory directory/new<CR>
-  noremap <silent> [unite]f :<C-u>Unite neomru/file file file/new<CR>
+  if has('nvim')
+    noremap <silent> [denite]f :<C-u>Denite file_mru file file:new<CR>
+  else
+    noremap <silent> [unite]f :<C-u>Unite neomru/file file file/new<CR>
+  endif
 endif
 
 "
@@ -47,7 +86,7 @@ call dein#add('Shougo/neosnippet-snippets', {
 " neosnippet.vim
 "
 call dein#add('Shougo/neosnippet.vim', {
-      \   'depends': ['neocomplete.vim', 'neosnippet-snippets'],
+      \   'depends': [has('nvim') ? 'deoplete.nvim' : 'neocomplete.vim', 'neosnippet-snippets'],
       \   'on_cmd': 'NeoSnippetEdit',
       \   'on_i': 1,
       \ })
@@ -89,6 +128,7 @@ endif
 "
 call dein#add('Shougo/unite.vim', {
       \   'depends': 'vimproc.vim',
+      \   'if': !has('nvim'),
       \   'on_cmd': 'Unite',
       \ })
 if dein#tap('unite.vim')
@@ -109,6 +149,7 @@ endif
 "
 call dein#add('Shougo/unite-outline', {
       \   'depends': 'unite.vim',
+      \   'if': !has('nvim'),
       \ })
 if dein#tap('unite-outline')
   noremap <silent> [unite]o :<C-u>Unite outline<CR>
@@ -176,6 +217,7 @@ call dein#add('derekwyatt/vim-scala', {
 "
 call dein#add('Shougo/vimfiler.vim', {
       \   'depends': ['unite.vim', 'vimproc.vim'],
+      \   'if': !has('nvim'),
       \   'on_path' : '.*',
       \ })
 if dein#tap('vimfiler.vim')
@@ -192,7 +234,8 @@ endif
 " vimproc.vim
 "
 call dein#add('Shougo/vimproc.vim', {
-      \   'build' : 'make'
+      \   'build' : 'make',
+      \   'lazy': 1,
       \ })
 
 call dein#end()

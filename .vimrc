@@ -7,12 +7,18 @@ colorscheme traditional
 
 set backupdir=~/.vim/backup
 set backupext=.bak
+set completeopt=menu
 set directory=~/.vim/swap
 set expandtab
+set guicursor=
 set hlsearch
 set ignorecase
+set incsearch
+set laststatus=1
 set list
 set listchars=tab:>-
+set noruler
+set nowildmenu
 set nowrap
 set shiftwidth=2
 set smartcase

@@ -5,17 +5,17 @@ highlight clear
 "
 " default
 "
-highlight StatusLine ctermfg=DarkGray ctermbg=Yellow
-highlight StatusLineNC ctermfg=DarkGray ctermbg=Yellow
-highlight VertSplit ctermfg=DarkGray ctermbg=DarkGray
+highlight StatusLine ctermfg=8 ctermbg=Yellow
+highlight StatusLineNC ctermfg=8 ctermbg=Yellow
+highlight VertSplit ctermfg=8 ctermbg=8
 highlight ColorColumn cterm=reverse ctermfg=LightGray ctermbg=NONE
-highlight Pmenu cterm=NONE ctermfg=Yellow ctermbg=DarkGray
-highlight PmenuSbar cterm=NONE ctermfg=NONE ctermbg=DarkGray
+highlight Pmenu cterm=NONE ctermfg=Yellow ctermbg=8
+highlight PmenuSbar cterm=NONE ctermfg=NONE ctermbg=8
 highlight PmenuSel cterm=reverse ctermfg=Yellow ctermbg=NONE
 highlight PmenuThumb cterm=NONE ctermfg=NONE ctermbg=LightGray
-highlight TabLine cterm=NONE ctermfg=Yellow ctermbg=DarkGray
-highlight TabLineFill cterm=NONE ctermfg=Yellow ctermbg=DarkGray
-highlight TabLineSel cterm=reverse ctermfg=Yellow ctermbg=DarkGray
+highlight TabLine cterm=NONE ctermfg=Yellow ctermbg=8
+highlight TabLineFill cterm=NONE ctermfg=Yellow ctermbg=8
+highlight TabLineSel cterm=reverse ctermfg=Yellow ctermbg=8
 highlight Title ctermfg=NONE
 highlight IncSearch cterm=reverse ctermfg=Magenta ctermbg=NONE
 highlight Search cterm=underline ctermfg=Magenta ctermbg=NONE
@@ -26,6 +26,7 @@ highlight LineNr ctermfg=LightGray
 highlight CursorLineNr ctermfg=NONE
 highlight Folded ctermfg=LightGray ctermbg=NONE
 highlight FoldColumn ctermfg=LightGray ctermbg=NONE
+highlight Visual ctermbg=8
 highlight DiffAdd cterm=underline ctermfg=Green ctermbg=NONE
 highlight DiffChange cterm=underline ctermfg=Blue ctermbg=NONE
 highlight DiffDelete cterm=underline ctermfg=Red ctermbg=NONE
@@ -38,6 +39,7 @@ highlight SpellRare cterm=underline ctermfg=Yellow ctermbg=NONE
 highlight SpellLocal cterm=underline ctermfg=Yellow ctermbg=NONE
 highlight MatchParen cterm=underline ctermfg=Magenta ctermbg=NONE
 highlight ErrorMsg cterm=NONE ctermfg=Red ctermbg=NONE
+highlight WarningMsg cterm=NONE ctermfg=Yellow ctermbg=NONE
 highlight MoreMsg cterm=NONE ctermfg=NONE
 highlight ModeMsg cterm=NONE ctermfg=NONE
 highlight Question ctermfg=Blue
