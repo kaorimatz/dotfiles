@@ -153,10 +153,20 @@ highlight javaScriptValue ctermfg=Green
 "
 " pangloss/vim-javascript
 "
+highlight jsClassKeyword ctermfg=Cyan
+highlight jsExport ctermfg=Cyan
+highlight jsExtendsKeyword ctermfg=Cyan
+highlight jsFrom ctermfg=Cyan
 highlight jsFunction ctermfg=Cyan
+highlight jsImport ctermfg=Cyan
+highlight jsLabel ctermfg=Cyan
+highlight jsModuleAs ctermfg=Cyan
+highlight jsNull ctermfg=Green
+highlight jsOperatorKeyword ctermfg=Cyan
 highlight jsReturn ctermfg=Cyan
 highlight jsStatement ctermfg=Cyan
 highlight jsStorageClass ctermfg=Cyan
+highlight jsUndefined ctermfg=Green
 
 "
 " php.vim
