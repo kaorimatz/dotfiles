@@ -11,6 +11,9 @@ set completeopt=menu
 set directory=~/.vim/swap
 set expandtab
 set fillchars=vert:\ 
+if has('nvim')
+  set fillchars+=eob:\ 
+end
 set guicursor=
 set hlsearch
 set ignorecase
