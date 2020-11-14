@@ -7,7 +7,7 @@ highlight clear
 "
 highlight StatusLine ctermfg=8 ctermbg=Yellow
 highlight StatusLineNC ctermfg=8 ctermbg=Yellow
-highlight VertSplit ctermfg=8 ctermbg=8
+highlight VertSplit cterm=NONE
 highlight ColorColumn cterm=reverse ctermfg=LightGray ctermbg=NONE
 highlight Pmenu cterm=NONE ctermfg=Yellow ctermbg=8
 highlight PmenuSbar cterm=NONE ctermfg=NONE ctermbg=8

@@ -10,6 +10,7 @@ set backupext=.bak
 set completeopt=menu
 set directory=~/.vim/swap
 set expandtab
+set fillchars=vert:\ 
 set guicursor=
 set hlsearch
 set ignorecase
