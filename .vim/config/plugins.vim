@@ -29,9 +29,15 @@ if dein#tap('denite.nvim')
   endfunction
   nnoremap [denite] <Nop>
   nmap <Space>u [denite]
-  noremap <silent> [denite]a :<C-u>Denite file/rec<CR>
-  noremap <silent> [denite]b :<C-u>Denite buffer<CR>
-  noremap <silent> [denite]g :<C-u>Denite file/rec/git<CR>
+  noremap <silent> [denite]a :<C-u>Denite file/rec -start-filter<CR>
+  noremap <silent> [denite]b :<C-u>Denite buffer -start-filter<CR>
+  noremap <silent> [denite]g :<C-u>Denite file/rec/git -start-filter<CR>
+  autocmd FileType denite call s:denite_key_mappings()
+  function! s:denite_key_mappings() abort
+    nnoremap <silent><buffer><expr> <C-m> denite#do_map('do_action')
+    nnoremap <silent><buffer><expr> i denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer><expr> q denite#do_map('quit')
+  endfunction
 endif
 
 "
