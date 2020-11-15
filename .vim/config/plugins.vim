@@ -51,6 +51,10 @@ if dein#tap('deoplete.nvim')
   function! g:dein#plugin.hook_source()
     let g:deoplete#enable_at_startup = 1
   endfunction
+  autocmd FileType denite-filter call s:denite_filter_deoplete()
+  function! s:denite_filter_deoplete() abort
+    call deoplete#custom#buffer_option('auto_complete', v:false)
+  endfunction
 endif
 
 "
